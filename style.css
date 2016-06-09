@@ -1,0 +1,8 @@
+    #animal1 img {width: 150px;
+    height: 150px;}
+
+    #animal2 img {width: 150px;
+    height: 150px;}
+
+    #animal1  {padding-top:250px;  position: absolute; display: block;   }
+  #animal2 {padding-top:100px;  position: absolute; display: block;}
