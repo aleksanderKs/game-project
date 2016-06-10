@@ -6,3 +6,6 @@
 
     #animal1  {padding-top:250px;  position: absolute; display: block;   }
   #animal2 {padding-top:100px;  position: absolute; display: block;}
+  .disabled {
+    cursor: not-allowed;
+  }

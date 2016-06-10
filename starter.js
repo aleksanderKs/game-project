@@ -3,74 +3,59 @@ $(document).ready(function() {
 var first = "First";
 var second = "Second";
 
-var firstClicked = false;
-var secondClicked = false;
+var buttonStart =$('#start');
 
 $('.first').click(function( ) {
   $('p').eq(1).text(" ").append(first);
-  firstClicked = true;
+  // if(betIsValid()){
+   enableStart();
+  // } else {
+  //   // display message that bet is invalid
+  // }
 });
 
 $('.second').click(function() {
   $('p').eq(1).text(" ").append(second);
-  secondClicked = true;
-  // $(this).unbind('click');  // click only once on element
+  // if(betIsValid()){
+    enableStart();
+  // } else {
+  //   // display message that bet is invalid
+  // }
 });
 
-//if (firstClicked || secondClicked){
-
-$('#start').click(function() {
-     $('#animal1').animate({
-      left: w
-      },
-      5000, function() {
-
-     });
-
-   $('#animal2').animate({
-       left: w
-       },
-        4000, function() {
-
-     });
-    })
-
-
-    });
-
-
-
-
-                  // add an event listener to the start button
-
-
-// if($('#id').data('clicked')) {
-//     //clicked element, do-some-stuff
-// } else {
-//     //run function2
-// }
-
-
-var w = $(window).width();
-
-
-
-
+function enableStart() {
+  let w = $(window).width();
+  $('#start').toggleClass('disabled');
   $('#start').click(function() {
-     $('#animal1').animate({
-      left: w
-      },
-      5000, function() {
+    $('#animal1').animate({left: w}, 5000, function() {
+        // animate function
+    }); // end animal 1 animation
+    $('#animal2').animate({left: w}, 4000, function() {
+      // animate function
+    }); // end animal 2 animation
+  }); // end start click
+} // end enableStart function
 
-     });
+function isBetValid() {
+  // Reads the input value of the betting input box
+  // makes sure it is a number
+  // makes sure the gambler has enough money for bet
+  // if all of the above is true return value of true
+  // else return value of false
+}
 
-   $('#animal2').animate({
-       left: w
-       },
-        4000, function() {
 
-     });
 
-    });
+
+
+
+
+
+
+
+}); // end of document ready function
+
+
+
 
 
