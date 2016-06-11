@@ -1,8 +1,17 @@
 $(document).ready(function() {
 
-var first = "First";
-var second = "Second";
-var third="Third";
+
+$('#start').hover(function(){
+        $(this).css("background-color", "yellow");
+        }, function(){
+        $(this).css("background-color", "pink");
+    });
+
+
+
+var first = "Your aminal N1";
+var second = "Your animal N2";
+var third="Your animal N3 ";
 
 var buttonStart =$('#start');
 
@@ -12,6 +21,9 @@ var speed3 = Math.floor((Math.random()*4500) +1 );
 
 
 $('.first').click(function( ) {
+
+
+
   $('p').eq(1).text(" ").append(first);
   // if(betIsValid()){
    enableStart();
@@ -43,20 +55,36 @@ $('.third').click(function() {
 function enableStart() {
   let w = $(window).width();
   $('#start').toggleClass('disabled');
+
   $('#start').click(function() {
+
     $('#animal1').animate({left: w}, speed, function() {
+      if(speed <speed2 &&speed <speed3) {
+      console.log("Animal one won " + speed) }
+
+
+
         // animate function
     }); // end animal 1 animation
      $('#animal2').animate({left: w}, speed2, function() {
+    if(speed2 <speed &&speed2 <speed3) {
+      console.log("Animal 2 is won " + speed2) }
+
     //   // animate function
      }); // end animal 2 animation
 
  $('#animal3').animate({left: w}, speed3, function() {
+if(speed3 <speed2 &&speed3 <speed) {
+      console.log("Animal 3 is won" + speed3) }
       // animate function
     }); // end animal 3 animation
 
 
+
   }); // end start click
+
+
+
 } // end enableStart function
 
 function isBetValid() {
@@ -73,6 +101,23 @@ function checkIfwin() {
 //   $(".balance").text($(".money").val());
 // });
 };
+
+$('#restart').click(function() {
+ $('#animal1').css('left',0);
+ $('#animal2').css('left',0);
+ $('#animal3').css('left',0);
+});
+var place1 ="First";
+// var place2="";
+// var place3 ="";
+
+var raceIsfinished ="false";
+
+
+
+
+
+
 
 
 

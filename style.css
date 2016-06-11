@@ -14,8 +14,9 @@
 
     #animal3{ position: relative; display: block;   }
 
-#userPick {position: relative; float: left;  }
+/*#userPick {position: relative; margin-left: 130px ; margin-top: 0; padding-top: 0 }*/
 
  #allImg{ background-image: url("4.jpg");no-repeat scroll center top transparent }
 
-
+#butons {position: relative;text-align: center;    padding-top:7px;}
+body {padding: 0 auto; margin:0 auto;}
