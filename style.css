@@ -4,17 +4,17 @@
     #animal2  {width: 120px;
     height: 120px;}
 
-    #animal1  {padding-top:0px;  position: relative; display: block;     }
-  #animal2 {padding-top:0px;  position: relative; display: block;  }
+    #animal1  {padding-top:0px;  position: relative; display: block;  opacity: 0.7;   }
+  #animal2 {padding-top:0px;  position: relative; display: block; opacity:0.7;  }
   .disabled {
     cursor: not-allowed;
   }
  #animal3  {width: 120px;
-    height: 120px; position: relative;  z-index : 101 ;}
+    height: 120px; position: relative;  opacity:0.7;}
 
     #animal3{ position: relative; display: block;   }
 
-
+#userPick {position: relative; float: left;  }
 
  #allImg{ background-image: url("4.jpg");no-repeat scroll center top transparent }
 
