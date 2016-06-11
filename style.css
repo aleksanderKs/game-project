@@ -1,11 +1,21 @@
-    #animal1 img {width: 150px;
-    height: 150px;}
+    #animal1  {width: 120px;
+    height: 120px;}
 
-    #animal2 img {width: 150px;
-    height: 150px;}
+    #animal2  {width: 120px;
+    height: 120px;}
 
-    #animal1  {padding-top:250px;  position: absolute; display: block;   }
-  #animal2 {padding-top:100px;  position: absolute; display: block;}
+    #animal1  {padding-top:0px;  position: relative; display: block;     }
+  #animal2 {padding-top:0px;  position: relative; display: block;  }
   .disabled {
     cursor: not-allowed;
   }
+ #animal3  {width: 120px;
+    height: 120px; position: relative;  z-index : 101 ;}
+
+    #animal3{ position: relative; display: block;   }
+
+
+
+ #allImg{ background-image: url("4.jpg");no-repeat scroll center top transparent }
+
+
