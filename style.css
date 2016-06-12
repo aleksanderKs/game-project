@@ -20,3 +20,13 @@
 
 #butons {position: relative;text-align: center;    padding-top:7px;}
 body {padding: 0 auto; margin:0 auto;}
+
+h4{ text-align: center; }
+#threebtn {text-align: center;}
+p { font-size: 28px; text-align: center;}
+box-change{color:red}
+
+#win{position: fixed; top:20px; font-size: 40px; color:green;}
+#userPick {text-align: left;}
+#check {font-size: 30px; color: #FCCACA; text-align: center;}
+#win2{position: fixed; top:20px; font-size: 40px; color:green; text-align: right;}

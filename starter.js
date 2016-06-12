@@ -8,55 +8,46 @@ $('#start').hover(function(){
     });
 
 
-
-
-
-
-// function hey(){
-//  var $a =$('.first');
-// var $b =$('.second');
-// var $c =$('.third');
-
-// $($a).on('click change', function() {
-//     $(this).data('clicked', true);
-//    return true;
-// })
-
-// $($b).on('click change', function() {
-//     $(this).data('clicked', true);
-//     return true;
-// })
-
-// $($c).on('click change', function() {
-//     $(this).data('clicked', true);
-//     console.log('clicked c ');
-//     return true;
-// })
-
-
-// };
-// hey();
-
-
-
-
-
-var first ="anima";
-var second ="animal";
-var third="animalN";
+var first ="Animal one finished first!!!!";
+var second ="Animal two finished first";
+var third="Animal three finished first";
 var animaPicked = "";
 var buttonStart =$('#start');
 
-var speed = Math.floor((Math.random()*4500) +1 );
-var speed2 = Math.floor((Math.random()*4500) +1 );
-var speed3 = Math.floor((Math.random()*4500) +1 );
+var speed = Math.floor((Math.random()*6500) +1 );
+var speed2 = Math.floor((Math.random()*6500) +1 );
+var speed3 = Math.floor((Math.random()*6500) +1 );
+
+$(".first").mouseover(function(){
+        $(this).css("background-color", "#BCFAFA");
+    });
+
+$(".third").mouseover(function(){
+        $(this).css("background-color", "#BCFAFA");
+    });
 
 
-$('.first').click(function( ) {
+$(".second").mouseover(function(){
+        $(this).css("background-color", "#BCFAFA");
+    });
 
 
 
-  $('p').eq(1).text(" ").append(first);
+$("#restart").mouseover(function(){
+        $(this).css("background-color", "#BCBAFA");
+    });
+ $("#restart").mouseout(function(){
+        $(this).css("background-color", "white");
+    });
+
+
+
+$(".first").click(function( ) {
+
+
+
+
+$('p').eq(0).text(" ").append(first).hide();
   // if(betIsValid()){
    enableStart();
   // } else {
@@ -65,7 +56,7 @@ $('.first').click(function( ) {
 });
 
 $('.second').click(function() {
-  $('p').eq(1).text(" ").append(second);
+  $('p').eq(0).text(" ").append(second).hide();
   // if(betIsValid()){
     enableStart();
   // } else {
@@ -74,7 +65,7 @@ $('.second').click(function() {
 });
 
 $('.third').click(function() {
-  $('p').eq(1).text(" ").append(third);
+  $('p').eq(0).text(" ").append(third).hide() ;
   // if(betIsValid()){
     enableStart();
   // } else {
@@ -83,12 +74,8 @@ $('.third').click(function() {
 });
 
 
-
-
-
-
-
 var $winnermsg =$('#win');
+
 var currentValue = $(".balance").text();
 var newValue = parseInt(parseFloat(currentValue));
 
@@ -96,26 +83,24 @@ var newValue = parseInt(parseFloat(currentValue));
 function enableStart() {
 
 
-
-
-
-
-
-  let w = $(window).width();
+let w = $(window).width();
   $('#start').toggleClass('disabled');
 
   $('#start').click(function() {
 
 
-   var $ch =$('#check').html().length;
-   var $b = $('#userPick').html().length;
+   // var $ch =$('#check').html().length;
+   // var $b = $('#userPick').html().length;
 
 
     $('#animal1').animate({left: w}, speed, function() {
       if(speed <speed2 &&speed <speed3 ) {
-     $('#check').text("animal");
-     if( $('#check').html().length === $('#userPick').html().length ) {
-       $winnermsg.append('Congratulation 1 is won');
+     $('#check').text("Animal one finished first!!!!");
+
+     if( $('#check').html().length +1 === $('#userPick').html().length ) {
+       $winnermsg.append('Congratulation 1 is won').fadeIn(600).fadeOut(600).fadeIn(600).fadeIn(100).fadeOut(100).fadeIn(100);
+
+
        newValue +=1;
        $(".balance").text(newValue);
 }
@@ -137,13 +122,19 @@ if ($('.balance').text() ==0){
 gameOver()
 
 
+
+
+
+
  // animate function
     }); // end animal 1 animation
      $('#animal2').animate({left: w}, speed2, function() {
     if (speed2 <speed &&speed2 <speed3 ) {
-$('#check').text("animal2");
-if( $('#check').html().length === $('#userPick').html().length ) {
-       $winnermsg.append('Congratulation 2 is won');
+  $('#check').text("Animal two finished first");
+if( $('#check').html().length +1 === $('#userPick').html().length ) {
+$winnermsg.append('Congratulation you won').fadeIn(100).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
+ $winnermsg2.append('Congratulation 1 is won').fadeIn(600).fadeOut(600).fadeIn(600).fadeIn(500).fadeOut(500).fadeIn(500);
+
        newValue +=1;
        $(".balance").text(newValue);
 
@@ -157,8 +148,6 @@ if( $('#check').html().length === $('#userPick').html().length ) {
 
      };
 
-
-
     }
 
     //   // animate function
@@ -167,10 +156,10 @@ if( $('#check').html().length === $('#userPick').html().length ) {
  $('#animal3').animate({left: w}, speed3, function() {
 
 if(speed3 <speed2 &&speed3 <speed   ) {
-$('#check').text("animalN3");
+$('#check').text("Animal three finished first");
 
-if( $('#check').html().length === $('#userPick').html().length ) {
-       $winnermsg.append('Congratulation 3rd won');
+if( $('#check').html().length +1  === $('#userPick').html().length ) {
+       $winnermsg.append('Congratulation you won').fadeIn(100).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
       newValue +=1;
        $(".balance").text(newValue);
 
@@ -232,7 +221,15 @@ function checkIfwin() {
 };
 
 $('#restart').click(function() {
-  $('#start').toggleClass('disabled');
+
+        $(".first").css("background-color", "white");
+
+
+        $(".second").css("background-color", "white");
+
+
+        $(".third").css("background-color", "white");
+ $('#start').toggleClass('disabled');
   $winnermsg.text(" ");
    $('#check').text(" ");
  $('#animal1').css('left',0);
@@ -244,12 +241,6 @@ var place1 ="First";
 // var place3 ="";
 
 var raceIsfinished ="false";
-
-
-
-
-
-
 
 
 
