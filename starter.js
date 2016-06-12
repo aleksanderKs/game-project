@@ -88,10 +88,19 @@ $('.third').click(function() {
 
 
 
-var $winner ="";
+var $winnermsg =$('#win');
+var currentValue = $(".balance").text();
+var newValue = parseInt(parseFloat(currentValue));
 
 
 function enableStart() {
+
+
+
+
+
+
+
   let w = $(window).width();
   $('#start').toggleClass('disabled');
 
@@ -106,13 +115,26 @@ function enableStart() {
       if(speed <speed2 &&speed <speed3 ) {
      $('#check').text("animal");
      if( $('#check').html().length === $('#userPick').html().length ) {
-       $('#win').append('Congratulation 1 is won');
-        inputm+=5;
-     }
+       $winnermsg.append('Congratulation 1 is won');
+       newValue +=1;
+       $(".balance").text(newValue);
+}
 
- }
+else {
+       newValue -=1;
+       $(".balance").text(newValue);
+
+     };
+
+}
 
 
+function gameOver() {
+if ($('.balance').text() ==0){
+  alert("game over");
+}
+};
+gameOver()
 
 
  // animate function
@@ -121,9 +143,20 @@ function enableStart() {
     if (speed2 <speed &&speed2 <speed3 ) {
 $('#check').text("animal2");
 if( $('#check').html().length === $('#userPick').html().length ) {
-       $('#win').append('Congratulation 2 is won');
-        inputm++;
+       $winnermsg.append('Congratulation 2 is won');
+       newValue +=1;
+       $(".balance").text(newValue);
+
+
+
+     }
+
+     else {
+       newValue -=1;
+       $(".balance").text(newValue);
+
      };
+
 
 
     }
@@ -137,8 +170,16 @@ if(speed3 <speed2 &&speed3 <speed   ) {
 $('#check').text("animalN3");
 
 if( $('#check').html().length === $('#userPick').html().length ) {
-       $('#win').append('Congratulation 3rd won');
-       inputm++;
+       $winnermsg.append('Congratulation 3rd won');
+      newValue +=1;
+       $(".balance").text(newValue);
+
+
+     }
+     else {
+       newValue -=1;
+       $(".balance").text(newValue);
+
      };
 
 
@@ -159,34 +200,6 @@ if( $('#check').html().length === $('#userPick').html().length ) {
 
 
 } // end enableStart function
-
-
-
-var inputm=0;
-function Tt(){
-  var $b =$('.s');
-$b.click(function(){
- inputm= $('.money').val();
-
-$(".balance").text(" ").append('<div class="item">' + inputm + '</div>');
-
-
-
-     }
-
-
-
-
-
-)
- };
- Tt();
-
-
-
-
-
-
 
 
 
@@ -220,6 +233,7 @@ function checkIfwin() {
 
 $('#restart').click(function() {
   $('#start').toggleClass('disabled');
+  $winnermsg.text(" ");
    $('#check').text(" ");
  $('#animal1').css('left',0);
  $('#animal2').css('left',0);
