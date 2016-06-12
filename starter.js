@@ -7,7 +7,6 @@ $('#start').hover(function(){
         $(this).css("background-color", "pink");
     });
 
-
 var first ="Animal one finished first!!!!";
 var second ="Animal two finished first";
 var third="Animal three finished first";
@@ -31,8 +30,6 @@ $(".second").mouseover(function(){
         $(this).css("background-color", "#BCFAFA");
     });
 
-
-
 $("#restart").mouseover(function(){
         $(this).css("background-color", "#BCBAFA");
     });
@@ -40,12 +37,7 @@ $("#restart").mouseover(function(){
         $(this).css("background-color", "white");
     });
 
-
-
 $(".first").click(function( ) {
-
-
-
 
 $('p').eq(0).text(" ").append(first).hide();
   // if(betIsValid()){
@@ -89,10 +81,6 @@ let w = $(window).width();
   $('#start').click(function() {
 
 
-   // var $ch =$('#check').html().length;
-   // var $b = $('#userPick').html().length;
-
-
     $('#animal1').animate({left: w}, speed, function() {
       if(speed <speed2 &&speed <speed3 ) {
      $('#check').text("Animal one finished first!!!!");
@@ -112,18 +100,13 @@ else {
      };
 
 }
-
-
 function gameOver() {
 if ($('.balance').text() ==0){
   alert("game over");
+  $('body').
 }
 };
 gameOver()
-
-
-
-
 
 
  // animate function
@@ -138,8 +121,6 @@ $winnermsg.append('Congratulation you won').fadeIn(100).fadeOut(500).fadeIn(500)
        newValue +=1;
        $(".balance").text(newValue);
 
-
-
      }
 
      else {
@@ -149,8 +130,7 @@ $winnermsg.append('Congratulation you won').fadeIn(100).fadeOut(500).fadeIn(500)
      };
 
     }
-
-    //   // animate function
+ //   // animate function
      }); // end animal 2 animation
 
  $('#animal3').animate({left: w}, speed3, function() {
@@ -163,39 +143,23 @@ if( $('#check').html().length +1  === $('#userPick').html().length ) {
       newValue +=1;
        $(".balance").text(newValue);
 
-
-     }
+  }
      else {
        newValue -=1;
        $(".balance").text(newValue);
 
      };
 
-
-
 }
-
-
 
       // animate function
     }); // end animal 3 animation
 
-
-
-
-
   }); // end start click
-
-
 
 } // end enableStart function
 
-
-
-
-
-
-
+// i was trying to make this function where you can place bet
 
 
 // function isBetValid() {
@@ -221,14 +185,9 @@ function checkIfwin() {
 };
 
 $('#restart').click(function() {
-
-        $(".first").css("background-color", "white");
-
-
-        $(".second").css("background-color", "white");
-
-
-        $(".third").css("background-color", "white");
+$(".first").css("background-color", "white");
+$(".second").css("background-color", "white");
+$(".third").css("background-color", "white");
  $('#start').toggleClass('disabled');
   $winnermsg.text(" ");
    $('#check').text(" ");
@@ -241,8 +200,6 @@ var place1 ="First";
 // var place3 ="";
 
 var raceIsfinished ="false";
-
-
 
 
 }); // end of document ready function
