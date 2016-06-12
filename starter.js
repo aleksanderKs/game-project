@@ -9,10 +9,10 @@ $('#start').hover(function(){
 
 
 
-var first = "Your aminal N1";
+var first ="animalN1";
 var second = "Your animal N2";
 var third="Your animal N3 ";
-
+var animaPicked = "";
 var buttonStart =$('#start');
 
 var speed = Math.floor((Math.random()*4500) +1 );
@@ -51,6 +51,9 @@ $('.third').click(function() {
 });
 
 
+var $b = $('#userPick').html();
+var $winner ="";
+
 
 function enableStart() {
   let w = $(window).width();
@@ -59,23 +62,23 @@ function enableStart() {
   $('#start').click(function() {
 
     $('#animal1').animate({left: w}, speed, function() {
-      if(speed <speed2 &&speed <speed3) {
-      console.log("Animal one won " + speed) }
+      if(speed <speed2 &&speed <speed3 && first) {
+      console.log("Congratulation you won!!!" + speed);
 
 
-
-        // animate function
+    }
+ // animate function
     }); // end animal 1 animation
      $('#animal2').animate({left: w}, speed2, function() {
-    if(speed2 <speed &&speed2 <speed3) {
-      console.log("Animal 2 is won " + speed2) }
+    if(speed2 <speed &&speed2 <speed3 && second) {
+      console.log("Animal 2 is won " + speed2  ) }
 
     //   // animate function
      }); // end animal 2 animation
 
  $('#animal3').animate({left: w}, speed3, function() {
-if(speed3 <speed2 &&speed3 <speed) {
-      console.log("Animal 3 is won" + speed3) }
+if(speed3 <speed2 &&speed3 <speed && third ) {
+      console.log("Congratulation you won" + speed3  ) }
       // animate function
     }); // end animal 3 animation
 
