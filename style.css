@@ -1,0 +1,34 @@
+    #animal1  {width: 120px;
+    height: 120px;}
+
+    #animal2  {width: 120px;
+    height: 120px;}
+
+    #animal1  {padding-top:0px;  position: relative; display: block;  opacity: 0.7;   }
+  #animal2 {padding-top:0px;  position: relative; display: block; opacity:0.7;  }
+  .disabled {
+    cursor: not-allowed;
+  }
+ #animal3  {width: 120px;
+    height: 120px; position: relative;  opacity:0.7;}
+
+    #animal3{ position: relative; display: block;   }
+
+/*#userPick {position: relative; margin-left: 130px ; margin-top: 0; padding-top: 0 }*/
+
+ #allImg{ background-image: url("4.jpg");no-repeat scroll center top transparent }
+
+#butons {position: relative;text-align: center;    padding-top:7px;}
+body {padding: 0 auto; margin:0 auto;}
+
+h4{ text-align: center; }
+#threebtn {text-align: center;}
+p { font-size: 28px; text-align: center;}
+box-change{color:red}
+
+#win{position: fixed; top:20px; font-size: 40px; color:green;}
+#userPick {text-align: left;}
+#check {font-size: 30px; color: #FCCACA; text-align: center;}
+#win2{position: fixed; top:20px; font-size: 40px; color:green; text-align: right;}
+#container {background-color:#EFEEEE }
+
