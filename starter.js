@@ -103,7 +103,6 @@ else {
 function gameOver() {
 if ($('.balance').text() ==0){
   alert("game over");
-  $('body').
 }
 };
 gameOver()
